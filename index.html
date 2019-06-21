@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link href="c:\Users\jnewm\Desktop\JS name generator\styles.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Random Name Generator</h1>
+            <span class="blank"></span>
+            <button class="btn" onclick="genName()">Generate Name</button>
+        </div>
+        <script>
+            const button = document.querySelector('.btn');
+            const blank = document.querySelector('.blank');
+            function genName() {
+                const list1 = ["abandoned","able","absolute","adorable","adventurous","academic","acceptable","acclaimed","accomplished","accurate","aching","acidic","acrobatic","active","actual","adept","admirable","admired","adolescent","adorable","adored","advanced","afraid","affectionate"];
+                const list2 = ["people","history","way","art","world","information","map","family","government","health","system","computer","meat","year","thanks","music","person","reading","method","data","food","text","animal","author","budget","discount","file","sale","season","signal"];
+                const name1 = list1[Math.floor(Math.random() * list1.length)];
+                const name2 = list2[Math.floor(Math.random() * list2.length)];
+
+                blank.innerHTML = name1 + ' ' + name2;
+            }
+            button.addEventListener('click', genName);
+        </script>
+    </body>
+    </html>
